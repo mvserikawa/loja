@@ -18,7 +18,7 @@ export class LoginComponent {
           localStorage.setItem("cliente", JSON.stringify(this.obj));
           window.location.href="./cliente";
     } else {
-      this.mensagem = "email ou senha ivalidos !!!";
+      this.mensagem = "Email ou senha inválidos !!!";
       localStorage.removeItem("cliente");
     }  
   }

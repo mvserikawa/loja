@@ -1,0 +1,15 @@
+<section>
+    <div class="transparent-box">
+      <p>Acesse sua conta para continuar explorando!</p>
+    
+        <input type="email" [(ngModel)]="obj.email" placeholder="Email..."><br>
+        <input type="password" [(ngModel)]="obj.senha" placeholder="Senha..."><br>
+        <button (click)="fazerLogin()">Entrar</button>
+        <br><br>
+        <button (click)="novoCadastro()">Novo cadastro</button>
+        <br>
+        <!-- Link estilizado como botão para recuperar senha -->
+        <a href="./esqueci" class="button-link">Recuperar Senha</a> 
+        <b>{{mensagem}}</b>
+    </div>
+</section>

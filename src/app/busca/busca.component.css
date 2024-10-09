@@ -1,0 +1,161 @@
+/* Estilo global */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, black, #8B0000); /* Degradê do preto para cor de vinho */
+    background-size: 200%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    justify-content:left; /* Alinha os produtos à direita */
+}
+
+section.produtos {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 10px;
+    justify-content: center; /* Alinha os produtos ao centro */
+}
+
+/* Produto individual */
+.produto {
+    background-color: rgba(255, 255, 255, 0.1); /* Caixa com fundo semi-transparente */
+    width: calc(24% - 20px); /* Quatro produtos por linha */
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 20px; /* Tamanho da fonte */
+    border-radius: 15px; /* Arredondar mais as bordas */
+    transition: width 0.3s ease; /* Animação suave ao mudar a largura */
+    margin: 5px; /* Margem ao redor de cada produto */
+    position: relative; /* Para garantir que o desconto funcione */
+    color: rgb(255, 255, 255); /* Define a cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+/* Responsividade para telas pequenas (1 produto por linha) */
+@media (max-width: 768px) {
+    .produto {
+        width: calc(90% - 20px); /* Um produto por linha, ajustando a largura */
+        margin: 10px auto; /* Centraliza os produtos */
+    }
+}
+
+
+/* Preço do produto */
+.preco {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6600;
+    background-color: rgba(255, 228, 225, 0.8);
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.preco:hover {
+    background-color: white;
+    color: #ff6600;
+}
+
+/* Imagem do produto */
+.produto img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Parágrafo de descrição */
+.produto p {
+    margin: 10px 0;
+}
+
+/* Botão de ação */
+.produto button {
+    background-color: #ff6600; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Tamanho do botão */
+    margin-top: 10px; /* Espaço acima do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    width: 100%; /* Faz o botão ocupar 100% da largura */
+    box-sizing: border-box; /* Garante que o padding seja incluído no cálculo da largura */
+}
+
+/* Efeito ao passar o mouse no botão */
+.produto button:hover {
+    background-color: #cc5200;
+}
+
+
+
+/* Estilo do rótulo Busca */
+.busca-label {
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-size: 16px;   /* Tamanho da fonte */
+    color: white;      /* Cor do texto */
+    margin-right: 10px; /* Espaçamento à direita */
+}
+
+/* Centraliza a caixa de busca */
+.busca-input {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 20px auto; /* Centraliza a caixa de busca */
+    max-width: 100%; /* Mantém a largura máxima */
+}
+
+/* Ajusta o campo de entrada para maior largura */
+.busca-input-field {
+    width: 490px; /* Largura ajustada */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    transition: border 0.3s ease; /* Suave transição para foco */
+}
+
+.busca-container {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    min-height: 450px;; /* Preenche toda a altura da tela */
+    width: 100%; /* Ocupa toda a largura */
+    padding: 10px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+}
+
+/* Estilo para a mensagem */
+.produtos {
+    color: white; /* Cor do texto */
+    font-size: 20px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Margem acima e abaixo */
+}
+

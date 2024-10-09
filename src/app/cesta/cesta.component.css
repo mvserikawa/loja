@@ -1,0 +1,222 @@
+/* Estilo global */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, black, #8B0000); /* Degradê do preto para cor de vinho */
+    background-size: 200%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    color: white; /* Cor do texto global */
+}
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 20px; /* Tamanho do título */
+    color: #ffffff; /* Cor do texto */
+    margin-bottom: 10px; /* Espaçamento inferior para separar do texto merchan */
+    width: 100%; /* Garante que ocupe a largura total do container */
+}
+
+/* Cesta Container */
+.cesta-container {
+    padding: 20px; /* Espaçamento interno para a cesta */
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border-radius: 15px; /* Arredondar as bordas da cesta */
+    margin: 10px auto; /* Margem de 10px e centralização horizontal */
+    max-width: 1550px; /* Largura máxima para a cesta */
+    min-height: 400px; /* Altura mínima para a cesta */
+    color: white; /* Cor do texto para melhor contraste */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    width: calc(100% - 20px); /* Largura total menos 20px para margem de 10px de cada lado */
+    text-align: center; /* Centraliza o texto dentro da cesta */
+}
+
+/* Título e Merchan */
+.merchan {
+    font-size: 1.2rem; /* Tamanho do texto do merchan */
+    color: #ddd; /* Cor para destaque */
+    margin-top: 10px; /* Espaçamento superior */
+    max-width: 600px; /* Limita a largura do merchan para melhor leitura */
+    margin-left: auto; /* Centraliza o texto horizontalmente */
+    margin-right: auto; /* Centraliza o texto horizontalmente */
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    justify-content: center; /* Centraliza os produtos na tela */
+}
+
+/* Produtos */
+.cesta {
+    display: flex; /* Alinha os produtos e a caixa lateral em linha */
+    justify-content: space-between; /* Espaço entre produtos e caixa lateral */
+}
+
+/* Seção de produtos */
+section.produtos {
+    flex: 1; /* Faz a seção de produtos crescer */
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 5px;
+    justify-content: space-between; /* Centraliza os produtos */
+}
+
+/* Produto individual */
+.produto {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    width: calc(33% - 20px); /* Ajuste para quatro produtos por linha em telas grandes */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px; /* Arredondar mais as bordas */
+    margin: 10px; /* Margem ao redor de cada produto */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+/* Detalhes Container */
+.detalhes-container {
+    display: flex;
+    flex-direction: column; /* Coloca imagem e detalhes em coluna */
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+/* Imagem do produto */
+.produto img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Parágrafo de descrição */
+.produto p {
+    margin: 10px 0;
+}
+
+/* Caixa para preço */
+.preco-container {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 15px; /* Arredondar bordas */
+    margin-bottom: 10px; /* Espaço abaixo do preço */
+    text-align: center;
+}
+
+/* Preço */
+.preco {
+    font-size: 1.5em; /* Tamanho da fonte aumentado para um destaque sutil */
+    font-weight: bold; /* Texto em negrito */
+    color: #d32f2f; /* Cor vermelha suave */
+    background-color: rgba(255, 228, 225, 0.8); /* Fundo levemente rosa */
+    padding: 12px 20px; /* Espaçamento interno com mais altura para o formato arredondado */
+    border: 1px solid #d32f2f; /* Borda suave na cor do texto */
+    border-radius: 25px; /* Bordas arredondadas para formato circular */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+}
+
+/* Botão de ação (padronizado) */
+.cesta-container button {
+    background-color: #ff6600; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 20px 20px; /* Tamanho do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    width: 170px; /* Faz o botão ocupar 100% da largura */
+    box-sizing: border-box; /* Garante que o padding seja incluído no cálculo da largura */
+    margin-top: 10px; /* Espaço acima do botão */
+}
+
+/* Efeito ao passar o mouse no botão */
+.produto button:hover,
+.cesta-container button:hover {
+    background-color: #cc5200; /* Cor ao passar o mouse */
+}
+
+/* Responsividade para um produto por linha em telas pequenas */
+@media (max-width: 768px) {
+    .produto {
+        width: calc(300% - 20px); /* Um produto por linha */
+    }
+    .lateral-container {
+        width: 50%; /* A caixa lateral ocupa toda a largura em telas menores */
+        margin-top: 20px; /* Espaço acima da caixa lateral */
+    }
+}
+
+/* Botão de Limpar Cesta */
+.limpar-cesta {
+    background-color: #d9534f; /* Cor de fundo vermelho */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Tamanho do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    width: 100%; /* Faz o botão ocupar 100% da largura */
+    box-sizing: border-box; /* Garante que o padding seja incluído no cálculo da largura */
+    margin-top: 10px; /* Espaço acima do botão */
+}
+
+/* Efeito ao passar o mouse no botão de Limpar Cesta */
+.limpar-cesta:hover {
+    background-color: #c9302c; /* Cor ao passar o mouse */
+}
+
+.mensagem-finalizacao {
+    color: #ffffff; /* Altere a cor conforme desejado */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Controle de quantidade */
+.quantidade-controle {
+    display: flex;
+    gap: 5px; /* Espaçamento entre os botões */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botões de controle de quantidade (mais e menos) */
+.quantidade-controle button {
+    width: 30px; /* Largura do botão */
+    height: 30px; /* Altura do botão, igual à largura para torná-lo redondo */
+    border-radius: 50%; /* Bordas arredondadas */
+    color: #d32f2f; /* Cor vermelha suave */
+    border: 1px solid #d32f2f; /* Borda suave na cor do texto */
+    background-color: rgba(255, 228, 225, 0.8); /* Fundo levemente rosa */
+    padding: 12px 20px; /* Espaçamento interno com mais altura para o formato arredondado */
+    border: none; /* Remove a borda padrão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    display: flex; /* Usando flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    font-size: 16px; /* Tamanho da fonte */
+    color: rgb(255, 0, 0); /* Cor do texto */
+}
+
+
+/* Efeito ao passar o mouse nos botões de controle de quantidade */
+.quantidade-controle button:hover {
+    background-color:  #cc5200; /* Cor ao passar o mouse */
+}

@@ -1,0 +1,17 @@
+<h3 class="produtos" *ngIf="lista.length <= 0">
+  Não existem produtos na vitrine
+</h3>
+
+<section class="produtos">
+  <div *ngFor="let item of lista" class="produto">
+      <h2>{{ item.nome }}</h2>
+      <img [src]="item.imagem" alt="{{ item.nome }}">
+      <p>{{ item.descritivo }}</p>
+      <p class="preco">Preço: R$ {{ item.preco.toFixed(2) }}</p>
+      <button (click)="comprar(item)">Comprar</button>
+      <button (click)="verDetalhe(item)">Ver Detalhes</button>
+  </div>
+</section>
+
+  
+  

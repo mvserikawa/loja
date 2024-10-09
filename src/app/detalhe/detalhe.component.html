@@ -1,0 +1,23 @@
+<h4>{{mensagem}}</h4>
+<div class="produto-detalhe" *ngIf="item.codigo > 0">
+    <div class="detalhes-container">
+        <img src="./assets/{{item.codigo}}.png" alt="{{item.nome}}">
+        <div class="caixa-detalhe">
+            <p>Descritivo: {{ item.descritivo }}</p>
+            <p>Tipo: {{ item.tipo }}</p>
+            <p>Origem: {{ item.origem }}</p>
+            <br>
+            <p class="preco">R$ {{ item.preco }}</p> <!-- Classe adicionada -->
+            <button *ngIf="item.quantidade > 0" (click)="comprar(item)">Comprar</button>
+            <br>
+            <div *ngIf="item.quantidade <= 0">Sem estoque</div>
+            <br>
+            <div class="detalhe-uva" *ngIf="getUvaDetails(item.codigo) as uva">
+                <p *ngIf="uva">{{ uva.descricao }}</p> 
+                <br>
+                <p *ngIf="!uva">Descrição não disponível para esta uva.</p>
+            </div>
+        </div>
+    </div>
+</div>
+

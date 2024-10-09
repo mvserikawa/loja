@@ -1,0 +1,40 @@
+<div class="cesta-container">
+  <h1>Escolha agora e faça parte do clube dos apreciadores!</h1>
+  <div class="cesta">
+    <section class="produtos">
+      <div *ngFor="let produto of produtos" class="produto">
+        <div class="detalhes-container">
+          <img src="./assets/{{produto.codigo}}.png" alt="{{produto.nome}}">
+          <div class="caixa-detalhe">
+            <h2>{{ produto.nome }}</h2>
+            <p>{{ produto.descritivo }}</p>
+            <p class="preco">R$ {{ produto.valor | number: '1.2-2' }}</p>
+            <p>Quantidade: {{ produto.quantidade }}</p>
+            <div class="quantidade-controle">
+              <button (click)="diminuirQuantidade(produto)">-</button>
+              <button (click)="aumentarQuantidade(produto)">+</button>
+            </div>
+            <button (click)="removeProduto(produto.codigo)">Remover</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Caixa lateral para Total, Limpar Cesta, Finalizar Compra e Pedido Finalizado -->
+    <div class="lateral-container">
+      <div class="total-container">
+        <h2>Total: R$ {{ total | number: '1.2-2' }}</h2>
+      </div>
+      <p>
+        <button class="limpar-cesta" (click)="limparCesta()">Limpar Cesta</button>
+      </p>
+      <p>
+        <button class="finalizar-compra" (click)="finalizarCompra()">Finalizar Compra</button>
+      </p>
+      <!-- Mensagem de Pedido Finalizado -->
+      <div *ngIf="pedidoFinalizado" class="mensagem-finalizacao">
+        <h2>Pedido Finalizado!</h2>
+      </div>
+    </div>
+  </div>
+</div>

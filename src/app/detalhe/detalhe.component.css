@@ -1,0 +1,114 @@
+/* Estilo global */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: 200%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos filhos horizontalmente */
+}
+
+.preco {
+    font-size: 24px; /* Tamanho da fonte aumentado para um destaque sutil */
+    font-weight: bold; /* Texto em negrito */
+    color: #ff6600; /* Cor vermelha suave */
+    background-color: rgba(255, 228, 225, 0.8); /* Fundo levemente rosa */
+    padding: 12px 20px; /* Espaçamento interno com mais altura para o formato arredondado */
+    border: 1px solid #ffffff; /* Borda suave na cor do texto */
+    border-radius: 25px; /* Bordas arredondadas para formato circular */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
+}
+/* Efeito de hover para o preço */
+.preco:hover {
+    background-color: white; /* Cor de fundo ao passar o mouse */
+    color: #ff6600; /* Cor do texto quando em hover */
+}
+/* Detalhes do produto */
+.produto-detalhe {
+    flex: 1; /* Faz com que o detalhe do produto ocupe todo o espaço disponível */
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    border: 1px solid #ccc;
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: flex-start; /* Alinha os elementos no início da coluna */
+    padding: 10px; /* Espaçamento interno reduzido */
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    font-weight: bold; /* Texto em negrito */
+    margin: 20px auto; /* Margem externa com auto para centralizar horizontalmente */
+    width: 540px; /* Largura fixa */
+    text-align: justify; /* Alinha o texto de forma justificada */
+}
+
+/* Novo contêiner para imagem e caixa de detalhe */
+.detalhes-container {
+    display: flex; /* Alinha a imagem e a caixa horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Imagem do produto */
+.detalhes-container img {
+    width: 150px; /* Ajusta a largura da imagem */
+    height: auto; /* Mantém a proporção */
+    margin-right: 20px; /* Espaço entre a imagem e a caixa */
+}
+
+/* Nova classe para a caixa de detalhes da uva */
+.caixa-detalhe {
+    background-color: rgb(139, 0, 0); /* Cor de fundo preta */
+    color: white; /* Cor do texto */
+    padding: 15px; /* Espaçamento interno reduzido */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+    text-align: center; /* Centraliza o texto */
+    width: 235px; /* Define a largura da caixa como 1,5x a largura da imagem */
+}
+
+/* Botão de ação */
+.caixa-detalhe button {
+    background-color: #ff6600; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 8px 15px; /* Tamanho do botão reduzido */
+    margin-top: 10px; /* Espaço acima do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte reduzido */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    width: 100%; /* Faz o botão ocupar 100% da largura */
+    box-sizing: border-box; /* Garante que o padding seja incluído no cálculo da largura */
+}
+
+/* Efeito ao passar o mouse no botão */
+.caixa-detalhe button:hover {
+    background-color: #cc5200;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .produto-detalhe {
+        padding: 10px; /* Reduz o padding em telas pequenas */
+        margin: 10px auto; /* Ajusta a margem para centralizar */
+        width: 90%; /* Ajusta a largura para ser responsiva */
+    }
+
+    .detalhes-container img {
+        width: 150px; /* Ajusta a largura da imagem para telas pequenas */
+    }
+
+    .caixa-detalhe {
+        width: 300px; /* Ajusta a largura da caixa para telas pequenas */
+    }
+}

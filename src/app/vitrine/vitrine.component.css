@@ -1,0 +1,122 @@
+/* Estilo global */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, black, #8B0000); /* Degradê do preto para cor de vinho */
+    background-size: 200%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    justify-content: center; /* Centraliza os produtos na tela */
+}
+
+/* Produtos */
+section.produtos {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 10px;
+    justify-content: center; /* Centraliza os produtos */
+}
+
+/* Produto individual */
+.produto {
+    background-color: rgba(255, 255, 255, 0.2); /* Caixa com fundo semi-transparente */
+    width: calc(24% - 20px); /* Quatro produtos por linha */
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 15px; /* Arredondar mais as bordas */
+    transition: width 0.3s ease; /* Animação suave ao mudar a largura */
+    margin: 5px; /* Margem ao redor de cada produto */
+    color: rgb(255, 255, 255); /* Define a cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+/* Preço do produto */
+.preco {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6600;
+    background-color: rgba(255, 228, 225, 0.8);
+    padding: 12px 20px;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.preco:hover {
+    background-color: white;
+    color: #ff6600;
+}
+
+/* Imagem do produto */
+.produto img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Parágrafo de descrição */
+.produto p {
+    margin: 10px 0;
+}
+
+/* Botão de ação */
+.produto button {
+    background-color: #ff6600; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Tamanho do botão */
+    margin-top: 10px; /* Espaço acima do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    width: 100%; /* Faz o botão ocupar 100% da largura */
+}
+
+/* Efeito ao passar o mouse no botão */
+.produto button:hover {
+    background-color: #cc5200;
+}
+
+/* Responsividade para telas médias (2 produtos por linha) */
+@media (max-width: 1024px) {
+    .produto {
+        width: calc(48% - 20px); /* Dois produtos por linha */
+    }
+}
+
+/* Responsividade para telas pequenas (1 produto por linha) */
+@media (max-width: 768px) {
+    .produto {
+        width: calc(90% - 20px); /* Um produto por linha, ajustando a largura */
+        margin: 10px auto; /* Centraliza os produtos */
+    }
+}
+
+/* Responsividade para telas muito pequenas (dispositivos móveis) */
+@media (max-width: 480px) {
+    .produto {
+        width: calc(100% - 20px); /* Ocupa toda a largura disponível */
+        margin: 10px 0; /* Espaçamento entre os produtos */
+    }
+}

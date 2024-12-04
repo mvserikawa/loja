@@ -1,0 +1,106 @@
+/* Estilo global (se necessário) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Estilo da caixa transparente */
+.transparent-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 560px; /* Ajustando a largura da caixa para corresponder à outra */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-size: 20px; /* Tamanho da fonte aumentado */
+    margin: 20px auto; /* Centraliza horizontalmente com margem automática */
+    text-align: center; /* Centraliza o texto */
+    border: 1px solid #ccc;
+
+}
+
+/* Estilo dos inputs */
+input {
+    background-color: white;
+    color: rgb(162, 150, 150);
+    border-radius: 5px;
+    padding: 10px; /* Adiciona padding para melhor conforto */
+    width: 100%; /* Faz o input ocupar toda a largura disponível */
+    border: 1px solid #ccc; /* Borda padrão */
+    margin-bottom: 15px; /* Espaçamento entre os inputs */
+}
+
+/* Recuperar a senha */
+.button-link {
+    display: inline-block;
+    font-size: 20px; /* Tamanho da fonte igual ao da classe .preco */
+    font-weight: bold; /* Negrito */
+    color: #ff6600; /* Cor vermelha suave igual à .preco */
+    background-color: rgba(255, 228, 225, 0.8); /* Fundo levemente rosa */
+    padding: 12px 20px; /* Espaçamento interno */
+    border: 1px solid #ffffff; /* Borda na cor do texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: background-color 0.3s ease; /* Transição suave */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+}
+
+.button-link:hover {
+    background-color: rgb(255, 255, 255); /* Cor de fundo levemente alterada ao passar o mouse */
+}
+
+
+/* Estilo dos botões */
+button {
+    background-color: #ff6600; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 15px; /* Tamanho do botão reduzido */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte aumentado */
+    width: 100%; /* Faz o botão ocupar 100% da largura */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+/* Efeito ao passar o mouse no botão */
+button:hover {
+    background-color: #cc5200; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo dos links */
+a {
+    color: orange;
+    margin-top: 10px; /* Espaço acima do link */
+}
+
+/* Estilo do título e parágrafos */
+h2, p {
+    color: white; /* Cor branca no título e parágrafos */
+    font-weight: bold; /* Texto em negrito */
+    margin-bottom: 30px;
+    text-align: left; /* Alinhando à direita */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .transparent-box {
+        width: 90%; /* Ajusta a largura para ser responsiva */
+    }
+
+    input, button {
+        padding: 8px; /* Ajusta o padding para telas pequenas */
+    }
+}
+
+/* Estilo para a mensagem */
+.mensagem {
+    color: white; /* Cor branca */
+    font-weight: bold; /* Negrito */
+    margin-top: 20px; /* Espaço acima da mensagem */
+    font-size: 3em; /* Aumenta o tamanho da fonte para 2x */
+
+}

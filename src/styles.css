@@ -1,1 +1,237 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilo global - Aplicando o fundo com degradê */
+body, p, h1, h2, input, textarea {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: url('assets/f-01.png'); /* Caminho para a imagem de fundo */
+  background-size: 100% auto; /* Ajusta a largura para ocupar toda a tela */
+  min-height: 100vh; /* Garante que o fundo cubra a altura mínima da tela */
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1; /* Faz o conteúdo crescer para ocupar o espaço entre o navbar e o footer */
+}
+
+/* Navbar */
+#navbar {
+  background-color: rgba(255, 255, 255, 0.5); /* Caixa transparente */
+  color: white;
+  height: 80px; /* Aumentando a altura da navbar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+#navbar h1, a {
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+#logo {
+  width: 60px;
+  padding: 1px;
+}
+
+#navbar nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#navbar i {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+#acount:hover {
+  color: #8B0000; /* Efeito de hover no ícone da conta */
+}
+
+.material-icon {
+  padding: 10px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: center; /* Centraliza os links do menu */
+  background-color: #8B0000; /* Barra vermelha */
+  padding: 5px 0; /* Padding reduzido */
+  width: 100%; /* Garante que o menu ocupe 100% da largura */
+}
+
+.menu a {
+  color: white; /* Cor do texto dos links */
+  text-decoration: none;
+  padding: 8px 12px; /* Padding reduzido */
+}
+
+.menu a:hover {
+  text-decoration: underline; /* Efeito ao passar o mouse */
+}
+
+/* Carrossel */
+#carrossel {
+  display: flex;
+  justify-content: space-between; /* Isso garante que haja espaço entre os itens */
+  flex-wrap: wrap; /* Para que os produtos quebrem para a linha seguinte se não houver espaço */
+  gap: 20px; /* Espaçamento entre os produtos */
+}
+
+img {
+  width: 100%; /* Ajusta imagens para ocupar toda a largura disponível */
+}
+
+/* Estilo dos inputs */
+input {
+  width: 350px; /* Largura fixa */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #ffffff;
+  padding: 5px;
+  color: black; /* Texto dentro do input ficará preto */
+}
+
+input::placeholder {
+  color: gray; /* Cor do texto do placeholder */
+}
+
+#proc {
+  padding: 10px 0px;
+}
+
+nav {
+  margin: auto;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd; /* Efeito ao passar o mouse */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover #acount {
+  color: orange; /* Efeito de hover no ícone da conta */
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #8B0000; /* Cor do fundo da scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B0000; /* Cor do "polegar" da scrollbar */
+  border-radius: 10px; /* Arredondando a scrollbar */
+}
+
+/* Footer */
+footer {
+  background-color: #8B0000; /* Cor de fundo do footer */
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap; /* Para responsividade */
+  min-height: 150px; /* Definindo uma altura mínima */
+}
+
+.foot h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.foot ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove marcadores de lista */
+}
+
+#help, #sobre, #pagamento, #social {
+  flex: 1 1 150px; /* Flexível com largura mínima */
+  padding: 0 10px;
+}
+
+.foot li a {
+  text-decoration: none;
+}
+
+.foot li {
+  list-style: none; /* Remove marcadores de lista */
+}
+
+.foot li a:hover {
+  border-bottom: 2px solid #ccc; /* Efeito de hover nos links */
+}
+
+#pagamento img {
+  max-width: 50px; /* Ajusta a largura das imagens de pagamento */
+}
+
+#social {
+  display: flex;
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  align-items: center; /* Centraliza as imagens verticalmente */
+  height: 100%; /* Garante que o container ocupe toda a altura disponível */
+}
+
+#social img {
+  max-width: 30px; /* Ajusta a largura das imagens sociais */
+  margin: 0 10px; /* Espaçamento horizontal entre as imagens */
+}
+
+/* Responsividade para o footer */
+@media (max-width: 768px) {
+  footer {
+      flex-direction: column;
+      height: auto; /* Ajustar a altura automaticamente em telas menores */
+  }
+  #help, #pagamento, #social {
+      display: none; /* Esconde as seções não desejadas */
+  }
+  #sobre {
+      width: 100%; /* A seção "Sobre Nós" ocupará 100% da largura */
+      text-align: center; /* Centraliza o texto */
+  }
+}

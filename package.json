@@ -22,8 +22,10 @@
     "@angular/router": "^17.2.0",
     "@angular/ssr": "^17.2.3",
     "express": "^4.18.2",
+    "loja": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "vite": "^5.1.8",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {

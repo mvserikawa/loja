@@ -1,0 +1,21 @@
+<section>
+    <div class="transparent-box">
+        <p>Acesse sua conta para continuar explorando!</p>
+      
+
+        <input type="text" [(ngModel)]="obj.nome" placeholder="Nome..."><br>
+        <input type="email" [(ngModel)]="obj.email" placeholder="Email..."><br>
+        <input type="text" [(ngModel)]="obj.documento" placeholder="Documento..."><br>
+        <input type="text" [(ngModel)]="obj.telefone" placeholder="Telefone..."><br>
+        <input type="text" [(ngModel)]="obj.logradouro" placeholder="Logradouro..."><br>
+        <input type="text" [(ngModel)]="obj.cep" placeholder="CEP..."><br>
+        <input type="text" [(ngModel)]="obj.cidade" placeholder="Cidade..."><br>
+        <input type="text" [(ngModel)]="obj.complemento" placeholder="Complemento..."><br>
+        <input type="password" [(ngModel)]="obj.senha" placeholder="Senha..."><br>
+
+        <button (click)="gravar()">Gravar</button>
+        <br><br>
+        <a href="./esqueci" class="button-link">Recuperar Senha</a> 
+        <b class="mensagem">{{ mensagem }}</b>
+    </div>
+</section>

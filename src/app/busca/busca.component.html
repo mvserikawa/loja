@@ -1,0 +1,21 @@
+<div class="busca-container">
+  <div class="busca-input">
+    <label for="filtro" class="busca-label"></label>
+    <input id="filtro" type="text" [(ngModel)]="filtro" class="busca-input-field" 
+    placeholder="Insira o nome do vinho que você procura!" >
+  </div>
+
+<h3 class="produtos" *ngIf="listaFiltrada.length <= 0">
+  Não foram encontrados produtos em sua pesquisa.
+</h3>
+
+<section class="produtos">
+  <div *ngFor="let item of listaFiltrada" class="produto">
+    <h4>{{item.nome}}</h4>
+    <img [src]="item.imagem" alt="{{ item.nome }}">
+    <p>{{item.descritivo}}</p>
+    <div class="preco">R$ {{item.preco.toFixed(2)}}</div>
+    <button (click)="verDetalhe(item)">Ver Mais</button>
+    <button *ngIf="item.quantidade > 0" (click)="adicionarItem(item)">Comprar</button>
+  </div>
+</section>

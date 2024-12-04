@@ -1,0 +1,80 @@
+/* Estilo da caixa transparente */
+.transparent-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 540px; /* Largura da caixa */
+    height: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto da caixa */
+}
+
+/* Estilo do título h1 */
+h1 {
+    color: white; /* Cor do título */
+    font-weight: bold; /* Negrito */
+    font-size: 20px; /* Tamanho da fonte */
+    margin-bottom: 0px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo da mensagem */
+b {
+    color: white; /* Cor da mensagem */
+    margin-bottom: 10px; /* Espaçamento abaixo da mensagem */
+    display: block; /* Faz a mensagem ocupar toda a linha */
+}
+
+/* Estilo dos labels */
+label {
+    color: white; /* Cor do texto do label */
+    margin-bottom: 5px; /* Espaçamento abaixo do label */
+    text-align: left; /* Alinha o texto à esquerda */
+    display: block; /* Faz o label ocupar toda a linha */
+}
+
+/* Estilo dos inputs */
+input {
+    background-color: white;
+    color: rgb(162, 150, 150);
+    border-radius: 5px;
+    padding: 10px; /* Adiciona padding para conforto */
+    width: 100%; /* Faz o input ocupar toda a largura disponível */
+    border: 1px solid #ccc; /* Borda padrão */
+    margin-bottom: 15px; /* Espaçamento entre os inputs */
+    text-align: left; /* Alinha o texto à esquerda dentro do input */
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #ff6600; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 15px; /* Tamanho do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    width: 100%; /* Faz o botão ocupar 100% da largura */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse no botão */
+button:hover {
+    background-color: #cc5200; /* Cor mais escura ao passar o mouse */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .transparent-box {
+        width: 90%; /* Ajusta a largura para ser responsiva */
+    }
+
+    input, button {
+        padding: 8px; /* Ajusta o padding para telas pequenas */
+    }
+}

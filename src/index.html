@@ -1,13 +1,83 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
   <title>Loja</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css"> <!-- Certifique-se de incluir seu arquivo CSS -->
 </head>
 <body>
+  <header id="navbar">
+    <a href="./vitrine" id="logo">
+      <img src="assets/ok-01.png" class="logotipo" alt="Logo">
+    </a>
+    <nav>
+      <div class="busca-container">
+        <div class="busca-input">
+          <label for="filtro" class="busca-label"></label>
+          <input id="filtro" type="text" [(ngModel)]="filtro" class="busca-input-field" 
+          placeholder="Insira o nome do vinho que você procura!" >
+        </div>
+    </nav>
+    <div class="dropdown">
+      <img src="assets/person.png">
+      <div class="dropdown-content">
+        <a href="./login">Login</a>
+        <a href="./cliente">Nova Conta</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu">
+    <a href="./login">Login</a>
+    <a href="./vitrine">Vitrine</a>
+    <a href="./cesta">Cesta</a>
+    <a href="./cliente">Cadastro</a>
+    <a href="./busca">Busca</a>
+  </nav>
+
   <app-root></app-root>
+
+  <footer>
+    <div id="help" class="foot">
+      <h2>Ajuda</h2>
+      <ul>
+        <li><a href="#">Dúvidas Gerais</a></li>
+        <li><a href="#">Política de Trocas</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </div>
+
+    <div id="sobre" class="foot">
+      <h2>Sobre Nós</h2>
+      <p>
+        "Na Paladar de Vinho, transformamos a experiência de degustar vinhos em uma jornada sensorial única, onde cada gole é uma sinfonia de sabores que encanta todos os sentidos."
+      </p>
+    </div>
+
+    <div id="pagamento" class="foot">
+      <h2>Formas de Pagamento</h2>
+      <img src="/assets/cartao_1.png" alt="Mastercard">
+      <img src="/assets/cartao_2.png" alt="Visa">
+      <img src="/assets/cartao_3.png" alt="Elo">
+      <img src="/assets/cartao_4.png" alt="Hipercard">
+      <img src="/assets/cartao_5.png" alt="PIX">
+    </div>
+
+    <div id="social" class="foot">
+      <h2>Redes Social</h2>
+      <a href="https://www.facebook.com" target="_blank"><img src="/assets/social_1.png" alt="Facebook"></a>
+      <a href="https://www.youtube.com" target="_blank"><img src="/assets/social_3.png" alt="Youtube"></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="/assets/social_2.png" alt="Instagram"></a>
+    </div>
+  </footer>
+
+  <!-- Incluir scripts do Angular, se necessário -->
+  <script src="runtime.js" type="module"></script>
+  <script src="polyfills.js" type="module"></script>
+  <script src="styles.js" type="module"></script>
+  <script src="main.js" type="module"></script>
 </body>
 </html>
